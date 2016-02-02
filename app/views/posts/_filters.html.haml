@@ -1,0 +1,8 @@
+.table-header.row
+  .col-lg-9
+  .col-lg-3
+    = search_form_for @search, builder: SimpleForm::FormBuilder do |f|
+      = f.input_field :title_or_body_cont, label: false, input_html: {class: 'form-control'}, placeholder: 'Quick search...'
+      %span
+        = button_tag( class: 'btn') do
+          Search

@@ -1,0 +1,24 @@
+.panel-heading
+  %i.icon-table.icon-large
+  = t('tt.index', resource_name: Post.model_name.human)
+  .panel-tools
+    .btn-group
+      %a.btn{href: posts_path, data: {toggle: 'toolbar-tooltip'}, title: 'Reload'}
+        %i.icon-refresh
+    .badge= @posts.total_entries
+  %hr
+  = link_to 'New Post', new_post_path, class: 'btn btn-large btn-primary'
+.panel-body.filters
+  = render 'filters'
+%table.table
+  %thead
+    %tr
+      %th #
+      %th= sort_link(@search, :title, t('activerecord.attributes.post.title'))
+      %th= sort_link(@search, :body, t('activerecord.attributes.post.body'))
+      %th= sort_link(@search, :user_id, t('activerecord.attributes.post.user_id'))
+      %th= sort_link(@search, :is_public, t('activerecord.attributes.post.is_public'))
+      %th.actions
+        Actions
+  %tbody
+    = render @posts

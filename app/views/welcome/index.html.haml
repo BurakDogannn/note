@@ -1,5 +1,8 @@
 .jumbotron
   %h1 Welcome to note
+
+  = link_to 'My Posts', posts_path, class: 'btn btn-large btn-primary'
+
   - if current_user
     = link_to 'Sign out', destroy_user_session_path, class: 'btn btn-large', method: :delete
     .row-fluid.marketing

@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-admin = Admin.create(email: "admin@note.com", password: '12341234', password_confirmation: '12341234')
-admin.admin_profile = AdminProfile.create(first_name: 'Admin', last_name: "note")
+# admin = Admin.create(email: "admin@note.com", password: '12341234', password_confirmation: '12341234')
+# admin.admin_profile = AdminProfile.create(first_name: 'Admin', last_name: "note")
 
+100.times do |i|
+  Post.create(title: "title#{i}", body: "body #{i}", is_public: true )
+end

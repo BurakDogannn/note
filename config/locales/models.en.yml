@@ -51,4 +51,6 @@ en:
       admin_profile:
         first_name: Name
         last_name: Surname
-        gsm: Phone 
+        gsm: Phone
+      post:
+        title: Basliks
