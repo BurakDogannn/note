@@ -4,5 +4,5 @@ class Admin < ActiveRecord::Base
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
         has_one :admin_profile
-        accepts_nested_attributes_for :admin_profile
+        accepts_nested_attributes_for :admin_profile 
 end
